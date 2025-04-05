@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+html,body,#root{
+    height: 100%;
+}
+.grid-layout{
+    display: grid;
+    grid-template-columns: minmax(200px,250px) 1fr;
+}
