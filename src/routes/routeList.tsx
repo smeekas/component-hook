@@ -1,4 +1,5 @@
 import GridLightsPage from '../pages/GridLights.page';
+import { SelectableGridPage } from '../pages/SelectableGrid.page';
 
 export const routeList = [
   {
@@ -10,5 +11,10 @@ export const routeList = [
     name: 'Grid Light',
     path: '/grid-light',
     component: GridLightsPage,
+  },
+  {
+    name: 'Selectable Grid',
+    path: '/selectable-grid',
+    component: SelectableGridPage,
   },
 ];
