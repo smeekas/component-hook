@@ -1,0 +1,7 @@
+.listItem {
+    margin: 4px;
+}
+.checkbox {
+    display: flex;
+    gap: 8px;
+}

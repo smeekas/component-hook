@@ -1,20 +1,26 @@
-import GridLightsPage from '../pages/GridLights.page';
-import { SelectableGridPage } from '../pages/SelectableGrid.page';
+import GridLightsPage from "../pages/GridLights.page";
+import { NestedChekboxesPage } from "../pages/NestedCheckboxes.page";
+import { SelectableGridPage } from "../pages/SelectableGrid.page";
 
 export const routeList = [
   {
-    name: 'Home',
-    path: '/',
+    name: "Home",
+    path: "/",
     component: () => <h1>home</h1>,
   },
   {
-    name: 'Grid Light',
-    path: '/grid-light',
+    name: "Grid Light",
+    path: "/grid-light",
     component: GridLightsPage,
   },
   {
-    name: 'Selectable Grid',
-    path: '/selectable-grid',
+    name: "Selectable Grid",
+    path: "/selectable-grid",
     component: SelectableGridPage,
+  },
+  {
+    name: "Nested Chechboxes",
+    path: "/nested-checkboxes",
+    component: NestedChekboxesPage,
   },
 ];
