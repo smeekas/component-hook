@@ -4,8 +4,8 @@ import {
   TouchEventHandler,
   useMemo,
   useState,
-} from "react";
-import { Cell } from "./SelectableGrid.types";
+} from 'react';
+import { Cell } from './SelectableGrid.types';
 
 type SelectableGridProps = {
   rows: number;
@@ -68,7 +68,7 @@ function SelectableGrid({ columns, rows }: SelectableGridProps) {
     if (!shouldMouseCapture) return;
     const target = document.elementFromPoint(
       e.touches[0].clientX,
-      e.touches[0].clientY,
+      e.touches[0].clientY
     );
 
     if (target instanceof HTMLElement) {
@@ -101,47 +101,47 @@ function SelectableGrid({ columns, rows }: SelectableGridProps) {
   const handleFocusCell = (row: number, col: number) => {
     setFocusedCell({ row, col });
     const ele = document.querySelector(
-      `div[data-row="${row}"][data-col="${col}"]`,
+      `div[data-row="${row}"][data-col="${col}"]`
     );
     if (ele && ele instanceof HTMLElement) ele.focus();
   };
   const onKeyDown: KeyboardEventHandler<HTMLElement> = (e) => {
     switch (e.key) {
-      case "ArrowRight": {
+      case 'ArrowRight': {
         if (focusedCell) {
           handleFocusCell(
             focusedCell.row,
-            Math.min(columns - 1, focusedCell.col + 1),
+            Math.min(columns - 1, focusedCell.col + 1)
           );
         }
         break;
       }
-      case "ArrowLeft": {
+      case 'ArrowLeft': {
         if (focusedCell) {
           handleFocusCell(focusedCell.row, Math.max(0, focusedCell.col - 1));
         }
         break;
       }
-      case "ArrowUp": {
+      case 'ArrowUp': {
         if (focusedCell) {
           handleFocusCell(Math.max(0, focusedCell.row - 1), focusedCell.col);
         }
         break;
       }
-      case "ArrowDown": {
+      case 'ArrowDown': {
         if (focusedCell) {
           handleFocusCell(
             Math.min(rows - 1, focusedCell.row + 1),
-            focusedCell.col,
+            focusedCell.col
           );
         }
         break;
       }
-      case "Enter": {
+      case 'Enter': {
         handleCell(e);
         break;
       }
-      case "Escape": {
+      case 'Escape': {
         setStart(null);
         setCurrent(null);
         break;
@@ -155,29 +155,29 @@ function SelectableGrid({ columns, rows }: SelectableGridProps) {
   }
   return (
     <div
-      role="grid"
+      role='grid'
       onMouseDown={onMouseDown}
       onTouchStart={onTouchDown}
-      aria-label="Selectable cell grid"
-      aria-keyshortcuts="ArrowRight ArrowLeft ArrowUp ArrowDown Enter Escape"
+      aria-label='Selectable cell grid'
+      aria-keyshortcuts='ArrowRight ArrowLeft ArrowUp ArrowDown Enter Escape'
       tabIndex={0}
       onMouseMove={onMouseMove}
       onTouchMove={onTouchMove}
       onKeyDown={onKeyDown}
       aria-multiselectable={true}
       onMouseUp={() => setShouldMouseCapture(false)}
-      style={{ touchAction: "none" }}
+      style={{ touchAction: 'none' }}
     >
-      <div className="screen-reader" aria-live="polite">
-        {" "}
+      <div className='screen-reader' aria-live='polite'>
+        {' '}
         {getScreenReaderDescription()}
       </div>
       {rowArr.map((_, rowIndex) => {
         return (
           <div
             key={rowIndex}
-            className="border-collapse flex"
-            role="row"
+            className='border-collapse flex '
+            role='row'
             aria-rowindex={rowIndex}
           >
             {colArr.map((_, colIndex) => {
@@ -202,11 +202,11 @@ function SelectableGrid({ columns, rows }: SelectableGridProps) {
                   key={colIndex}
                   aria-colindex={colIndex}
                   aria-selected={!!isActive}
-                  role="gridcell"
+                  role='gridcell'
                   tabIndex={isFocused ? 0 : -1}
-                  style={{ borderWidth: "1px" }}
-                  className={`border-black  w-15 h-15 border-collapse focus:bg-blue-50 ${
-                    isActive && "bg-blue-300"
+                  style={{ borderWidth: '1px' }}
+                  className={`border-black border-solid  w-15 h-15 border-collapse focus:bg-blue-50 ${
+                    isActive && 'bg-blue-300'
                   }`}
                 />
               );
