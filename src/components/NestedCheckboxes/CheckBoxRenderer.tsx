@@ -15,7 +15,7 @@ export function CheckBoxRenderer({
   path,
 }: CheckBoxRendererProps) {
   return (
-    <ul role="tree">
+    <ul role="tree" className="list-none px-0 py-1 pl-3">
       {checkboxList.map((checkboxItem) => {
         return (
           <li
