@@ -1,10 +1,15 @@
-import React from 'react';
+import { getTabBtnId, getTabPanelId } from './tab.utils';
 import { TabType } from './tabs.types';
 
-type TabPanelProps = { tabData: TabType; hidden: boolean };
-function TabPanel({ tabData, hidden }: TabPanelProps) {
+type TabPanelProps = { tabData: TabType; hidden: boolean; componentId: string };
+function TabPanel({ tabData, hidden, componentId }: TabPanelProps) {
   return (
-    <div className={`${hidden && 'hidden'}`} key={tabData.id}>
+    <div
+      role='tabpanel'
+      className={`${hidden && 'hidden'}`}
+      aria-labelledby={getTabBtnId(tabData.id, componentId)}
+      id={getTabPanelId(tabData.id, componentId)}
+    >
       {tabData.component}
     </div>
   );

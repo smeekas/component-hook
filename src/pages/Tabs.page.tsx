@@ -21,6 +21,15 @@ export function TabsPage() {
         </>
       ),
     },
+    {
+      id: 'notifications',
+      name: <p>notifications</p>,
+      component: (
+        <>
+          <h2>Noti</h2>
+        </>
+      ),
+    },
   ];
   return <Tabs items={items} />;
 }
