@@ -20,10 +20,12 @@ function Tabs({ items }: TabsProps) {
     const index = items.findIndex((item) => item.id === id);
     switch (e.key) {
       case 'ArrowRight': {
+        // find next tab (circular)
         const newId = items[(index + 1) % items.length].id;
         const ele = document.getElementById(
           `${getTabBtnId(newId, componentId)}`
         );
+        // focus on new tab button
         if (ele instanceof HTMLElement) ele.focus();
         setActiveKey(newId);
         break;
@@ -37,6 +39,7 @@ function Tabs({ items }: TabsProps) {
         setActiveKey(newId);
         break;
       }
+      // support of home, esc, up/down arrow can be given
     }
   };
   return (
@@ -45,15 +48,19 @@ function Tabs({ items }: TabsProps) {
         {items.map((itemItem) => {
           return (
             <button
-              id={getTabBtnId(itemItem.id, componentId)}
-              role='tab'
               onKeyDown={(e) => onKeyDown(e, itemItem.id)}
+              id={getTabBtnId(itemItem.id, componentId)}
+              // button is acting like tab button
+              role='tab'
+              // only active tab is focusable, rest can be navigated via arrows
               tabIndex={activeKey === itemItem.id ? 0 : -1}
+              // which panel current button controls
+              aria-controls={getTabPanelId(itemItem.id, componentId)}
+              // for sr, if current tab is selected or not
+              aria-selected={activeKey === itemItem.id}
               type='button'
               key={itemItem.id}
-              aria-controls={getTabPanelId(itemItem.id, componentId)}
               onClick={() => onTabClick(itemItem.id)}
-              aria-selected={activeKey === itemItem.id}
             >
               {itemItem.name}
             </button>

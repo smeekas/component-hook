@@ -7,6 +7,7 @@ function TabPanel({ tabData, hidden, componentId }: TabPanelProps) {
     <div
       role='tabpanel'
       className={`${hidden && 'hidden'}`}
+      // label of current tabpanel is given by current tab button
       aria-labelledby={getTabBtnId(tabData.id, componentId)}
       id={getTabPanelId(tabData.id, componentId)}
     >
