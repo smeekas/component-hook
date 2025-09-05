@@ -2,6 +2,7 @@ import GridLightsPage from '../pages/GridLights.page';
 import { NestedChekboxesPage } from '../pages/NestedCheckboxes.page';
 import { SelectableGridPage } from '../pages/SelectableGrid.page';
 import { TabsPage } from '../pages/Tabs.page';
+import { TooltipPage } from '../pages/Tooltip.page';
 
 export const routeList = [
   {
@@ -28,5 +29,10 @@ export const routeList = [
     name: 'Tabs',
     path: '/tabs',
     component: TabsPage,
+  },
+  {
+    name: 'Vanilla Tooltip',
+    path: '/tooltip',
+    component: TooltipPage,
   },
 ];
