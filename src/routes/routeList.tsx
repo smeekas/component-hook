@@ -1,5 +1,6 @@
 import GridLightsPage from '../pages/GridLights.page';
 import { NestedChekboxesPage } from '../pages/NestedCheckboxes.page';
+import { NumberAnimationPage } from '../pages/NumberAnimation.page';
 import { SelectableGridPage } from '../pages/SelectableGrid.page';
 import { TabsPage } from '../pages/Tabs.page';
 import { TooltipPage } from '../pages/Tooltip.page';
@@ -34,5 +35,10 @@ export const routeList = [
     name: 'Vanilla Tooltip',
     path: '/tooltip',
     component: TooltipPage,
+  },
+  {
+    name: 'Number animation',
+    path: '/number-animation',
+    component: NumberAnimationPage,
   },
 ];
