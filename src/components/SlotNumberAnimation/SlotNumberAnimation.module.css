@@ -1,0 +1,28 @@
+.digit {
+  font-weight: 700;
+  line-height: 1em;
+}
+.strip {
+  overflow: hidden;
+}
+.stripInner {
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.slots {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  transition: all 1s ease-in;
+}
+
+.increasing {
+  color: green;
+}
+
+.decreasing {
+  color: red;
+}

@@ -3,6 +3,7 @@ import { NestedChekboxesPage } from '../pages/NestedCheckboxes.page';
 import { NumberAnimationPage } from '../pages/NumberAnimation.page';
 import { SelectableGridPage } from '../pages/SelectableGrid.page';
 import { TabsPage } from '../pages/Tabs.page';
+import { SlotNumberAnimationPage } from '../pages/SlotNumberAnimation.page';
 import { TooltipPage } from '../pages/Tooltip.page';
 
 export const routeList = [
@@ -37,8 +38,13 @@ export const routeList = [
     component: TooltipPage,
   },
   {
-    name: 'Number animation',
+    name: 'Number Animation',
     path: '/number-animation',
     component: NumberAnimationPage,
+  },
+  {
+    name: 'Slot Number Animation',
+    path: '/slot-number-animation',
+    component: SlotNumberAnimationPage,
   },
 ];
