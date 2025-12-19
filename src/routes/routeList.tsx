@@ -5,6 +5,7 @@ import { SelectableGridPage } from '../pages/SelectableGrid.page';
 import { TabsPage } from '../pages/Tabs.page';
 import { SlotNumberAnimationPage } from '../pages/SlotNumberAnimation.page';
 import { TooltipPage } from '../pages/Tooltip.page';
+import { TrafficLightPage } from '../pages/TrafficLight.page';
 
 export const routeList = [
   {
@@ -46,5 +47,10 @@ export const routeList = [
     name: 'Slot Number Animation',
     path: '/slot-number-animation',
     component: SlotNumberAnimationPage,
+  },
+  {
+    name: 'Traffic Light',
+    path: '/traffic-light',
+    component: TrafficLightPage,
   },
 ];
