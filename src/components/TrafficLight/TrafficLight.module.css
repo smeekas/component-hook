@@ -1,0 +1,13 @@
+.light {
+  width: 100px;
+  height: 100px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.lightbox {
+  background-color: black;
+  padding: 8px 8px;
+  width: max-content;
+}
