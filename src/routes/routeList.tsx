@@ -6,6 +6,7 @@ import { TabsPage } from '../pages/Tabs.page';
 import { SlotNumberAnimationPage } from '../pages/SlotNumberAnimation.page';
 import { TooltipPage } from '../pages/Tooltip.page';
 import { TrafficLightPage } from '../pages/TrafficLight.page';
+import { VirtualizedListPage } from '../pages/VirtualizedList.page';
 
 export const routeList = [
   {
@@ -52,5 +53,10 @@ export const routeList = [
     name: 'Traffic Light',
     path: '/traffic-light',
     component: TrafficLightPage,
+  },
+  {
+    name: 'Virtualized list ',
+    path: '/virtualized list',
+    component: VirtualizedListPage,
   },
 ];
