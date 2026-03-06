@@ -111,14 +111,22 @@ function Virtualized<T>({
   // simpler approach is to render three list, prevOverScan, main, overScan list
   return (
     // wrapper that makes overflow hidden and sets top on scroll
-    <div className={styles.wrapper} ref={parentRef} onScroll={onScroll}>
+    <div
+      className={styles.wrapper}
+      ref={parentRef}
+      onScroll={onScroll}
+      role='list'
+    >
       {/* from Interview POV
         wrapper is that makes overflow:scroll
         for wider support, wrapper is of same height as parent
         container contains all elements and is fully visible and is of size totalElement*elementSize
       */}
       {/* container that contains all the elements and is not hidden */}
-      <div className={styles.container} style={containerStyle}>
+      <div
+        className={`${styles.container} ${horizontal ? styles.horizontalContainer : ''}`}
+        style={containerStyle}
+      >
         {singleList.map((listItem, index) => (
           // render visible list
           // our start variable is of not main list's start but prevOverScanned's start
@@ -126,7 +134,12 @@ function Virtualized<T>({
           <div
             style={getElementStyle(index, rangeStart)}
             key={index + rangeStart}
-            className={styles.listitem}
+            role='listitem'
+            data-index={index + rangeStart}
+            tabIndex={0}
+            className={`${styles.listitem} ${horizontal ? styles.horizontalItem : ''}`}
+            aria-setsize={list.length}
+            aria-posinset={index + rangeStart + 1} // postinset is 1-indexed
           >
             {children({ item: listItem, index: index + rangeStart })}
           </div>

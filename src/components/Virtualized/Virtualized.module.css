@@ -1,9 +1,17 @@
 .listitem {
   position: absolute;
+  width: 100%;
+}
+.horizontalItem {
+  width: auto;
+  height: 100%;
 }
 .container {
   position: relative;
   background-color: rgb(35, 174, 35);
+}
+.horizontalContainer {
+  height: 100%;
 }
 .wrapper {
   overflow: scroll;
