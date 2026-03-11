@@ -1,0 +1,15 @@
+.otpContainer {
+  display: flex;
+  flex-direction: row;
+}
+.otpContainer input {
+  max-width: 30px;
+  outline: none;
+  /* border: 2px solid transparent; */
+}
+.otpContainer input:focus {
+  border: 2px solid gray;
+}
+.otpContainer input::-webkit-inner-spin-button {
+  display: none;
+}
