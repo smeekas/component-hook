@@ -7,6 +7,7 @@ import { SlotNumberAnimationPage } from '../pages/SlotNumberAnimation.page';
 import { TooltipPage } from '../pages/Tooltip.page';
 import { TrafficLightPage } from '../pages/TrafficLight.page';
 import { VirtualizedListPage } from '../pages/VirtualizedList.page';
+import { OTPPage } from '../pages/Otp.page';
 
 export const routeList = [
   {
@@ -58,5 +59,10 @@ export const routeList = [
     name: 'Virtualized list ',
     path: '/virtualized list',
     component: VirtualizedListPage,
+  },
+  {
+    name: 'OTP input',
+    path: '/otp-input',
+    component: OTPPage,
   },
 ];
