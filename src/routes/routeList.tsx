@@ -8,6 +8,7 @@ import { TooltipPage } from '../pages/Tooltip.page';
 import { TrafficLightPage } from '../pages/TrafficLight.page';
 import { VirtualizedListPage } from '../pages/VirtualizedList.page';
 import { OTPPage } from '../pages/Otp.page';
+import ToastPage from '../pages/Toast.page';
 
 export const routeList = [
   {
@@ -64,5 +65,10 @@ export const routeList = [
     name: 'OTP input',
     path: '/otp-input',
     component: OTPPage,
+  },
+  {
+    name: 'Toast',
+    path: '/toast',
+    component: ToastPage,
   },
 ];
