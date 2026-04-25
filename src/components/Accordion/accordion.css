@@ -1,0 +1,39 @@
+.control {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  display: flex;
+  background-color: gainsboro;
+  justify-content: space-between;
+}
+.panel {
+  background-color: antiquewhite;
+  display: grid;
+  width: 100%;
+  transition: grid-template-rows 0.2s;
+  grid-template-rows: 0fr;
+}
+.panel-container {
+  /* 0fr will not hide content */
+  /* this is the only child container of grid */
+  /* so 0fr will affect this container and we have given min-height:0 to this container */
+  /*  so 0fr will take this min-height  */
+  min-height: 0px;
+  overflow: hidden;
+}
+.visible {
+  /* not possible to animate height:auto */
+  /* possible to animate template-rows */
+  grid-template-rows: 1fr;
+}
+
+.icon {
+  transition: transform 0.2s;
+}
+.icon.open {
+  transform: rotate(-90deg);
+}
+.icon.close {
+  transform: rotate(90deg);
+}
