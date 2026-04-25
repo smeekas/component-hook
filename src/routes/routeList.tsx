@@ -9,6 +9,7 @@ import { TrafficLightPage } from '../pages/TrafficLight.page';
 import { VirtualizedListPage } from '../pages/VirtualizedList.page';
 import { OTPPage } from '../pages/Otp.page';
 import ToastPage from '../pages/Toast.page';
+import AccordionPage from '../pages/Accordion.page';
 
 export const routeList = [
   {
@@ -70,5 +71,10 @@ export const routeList = [
     name: 'Toast',
     path: '/toast',
     component: ToastPage,
+  },
+  {
+    name: 'Accordion',
+    path: '/accordion',
+    component: AccordionPage,
   },
 ];
