@@ -10,8 +10,6 @@ function Sidebar() {
             <li
               className='hover:bg-blue-700 hover:text-white bg-blue-50 transition  cursor-pointer'
               key={routeItem.name}
-              data-tooltip
-              data-tooltip-value='click to go'
             >
               <Link
                 className='w-full block text-gray-800 no-underline hover:text-white hover:underline py-3'

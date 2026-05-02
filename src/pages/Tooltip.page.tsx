@@ -1,6 +1,7 @@
 import { useLayoutEffect } from 'react';
 import { attach } from '../components/Tooltip/vanillaTooltip';
 import '../components/Tooltip/tooltip.css';
+
 export const TooltipPage = () => {
   useLayoutEffect(() => {
     attach();
@@ -16,7 +17,7 @@ export const TooltipPage = () => {
       </div>
 
       <div
-        className='h-10 overflow-scroll bg-blue-100'
+        className='h-20 overflow-scroll bg-blue-100'
         data-tooltip
         data-tooltip-value='tool'
         data-follow-cursor

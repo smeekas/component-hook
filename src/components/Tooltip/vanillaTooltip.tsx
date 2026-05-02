@@ -3,7 +3,6 @@ export function attach() {
     if (!(ele instanceof HTMLElement)) return;
     const tooltipValue = ele.dataset['tooltipValue'] || '';
     const shouldFollow = !!ele.dataset['followCursor'] || false;
-
     showTooltip(ele, tooltipValue, shouldFollow);
   });
 }
