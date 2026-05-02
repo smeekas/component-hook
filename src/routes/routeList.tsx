@@ -10,6 +10,7 @@ import { VirtualizedListPage } from '../pages/VirtualizedList.page';
 import { OTPPage } from '../pages/Otp.page';
 import ToastPage from '../pages/Toast.page';
 import AccordionPage from '../pages/Accordion.page';
+import { ReactTooltipPage } from '../pages/ReactTooltip.page';
 
 export const routeList = [
   {
@@ -39,7 +40,7 @@ export const routeList = [
   },
   {
     name: 'Vanilla Tooltip',
-    path: '/tooltip',
+    path: '/vanilla-tooltip',
     component: TooltipPage,
   },
   {
@@ -76,5 +77,10 @@ export const routeList = [
     name: 'Accordion',
     path: '/accordion',
     component: AccordionPage,
+  },
+  {
+    name: 'React Tooltip',
+    path: '/tooltip',
+    component: ReactTooltipPage,
   },
 ];
