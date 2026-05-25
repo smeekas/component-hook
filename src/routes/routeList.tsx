@@ -11,6 +11,7 @@ import { OTPPage } from '../pages/Otp.page';
 import ToastPage from '../pages/Toast.page';
 import AccordionPage from '../pages/Accordion.page';
 import { ReactTooltipPage } from '../pages/ReactTooltip.page';
+import { ModalPage } from '../pages/Modal.page';
 
 export const routeList = [
   {
@@ -82,5 +83,10 @@ export const routeList = [
     name: 'React Tooltip',
     path: '/tooltip',
     component: ReactTooltipPage,
+  },
+  {
+    name: 'Modal',
+    path: '/modal',
+    component: ModalPage,
   },
 ];
