@@ -5,10 +5,8 @@ function Layout() {
   return (
     <main className='grid-layout h-full'>
       <Sidebar />
-      <div
-       className='flex justify-center items-center'
-      >
-        <div className='h-200 w-200'>
+      <div className='flex justify-center items-center'>
+        <div className=' w-200'>
           <Outlet />
         </div>
       </div>
