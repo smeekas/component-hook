@@ -3,3 +3,17 @@
   height: 0.5px;
   overflow: hidden;
 }
+.mt-8 {
+  margin-top: 8px;
+}
+
+.flex {
+  display: flex;
+  gap: 12px;
+}
+.fd-column {
+  flex-direction: column;
+}
+.fd-row {
+  flex-direction: row;
+}

@@ -12,6 +12,7 @@ import ToastPage from '../pages/Toast.page';
 import AccordionPage from '../pages/Accordion.page';
 import { ReactTooltipPage } from '../pages/ReactTooltip.page';
 import { ModalPage } from '../pages/Modal.page';
+import { ProgressBarPage } from '../pages/Progressbar.page';
 
 export const routeList = [
   {
@@ -88,5 +89,10 @@ export const routeList = [
     name: 'Modal',
     path: '/modal',
     component: ModalPage,
+  },
+  {
+    name: 'Progress bar',
+    path: '/progress',
+    component: ProgressBarPage,
   },
 ];
