@@ -1,0 +1,22 @@
+.outer {
+  height: 16px;
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.inner {
+  height: 16px;
+  transform-origin: left;
+  transition: all linear 0.1s;
+  background-color: green;
+}
+
+.perc {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+  color: black;
+}
