@@ -9,7 +9,6 @@
 
 .flex {
   display: flex;
-  gap: 12px;
 }
 .fd-column {
   flex-direction: column;

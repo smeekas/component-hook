@@ -13,6 +13,7 @@ import AccordionPage from '../pages/Accordion.page';
 import { ReactTooltipPage } from '../pages/ReactTooltip.page';
 import { ModalPage } from '../pages/Modal.page';
 import { ProgressBarPage } from '../pages/Progressbar.page';
+import { AutoCompletePage } from '../pages/AutoComplete.page';
 
 export const routeList = [
   {
@@ -94,5 +95,10 @@ export const routeList = [
     name: 'Progress bar',
     path: '/progress',
     component: ProgressBarPage,
+  },
+  {
+    name: 'Autocomplete',
+    path: '/auto-complete',
+    component: AutoCompletePage,
   },
 ];

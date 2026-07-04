@@ -1,0 +1,35 @@
+.input {
+  font-size: 16px;
+}
+.autocomplete {
+  width: max-content;
+  position: relative;
+}
+.suggestion {
+  background-color: rgb(224, 223, 223);
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+  position: absolute;
+  overflow-y: auto;
+  max-height: 200px;
+  width: 100%;
+}
+.list-item {
+  cursor: pointer;
+  padding: 8px 4px;
+}
+.list-item:hover {
+  background-color: rgb(173, 173, 173);
+}
+
+.highlight {
+  background-color: rgb(173, 173, 173);
+}
+
+.highlighted {
+  font-weight: 800;
+}
+.empty{
+  padding: 4px 8px;
+}
