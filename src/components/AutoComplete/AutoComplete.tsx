@@ -31,6 +31,11 @@ function AutoComplete({
     [onSearch],
   );
 
+  useEffect(() => {
+    return () => {
+      onSearchMemoized?.cancel();
+    };
+  }, []);
   const isValid = (
     index: number | null | undefined,
     length: number,
@@ -117,7 +122,6 @@ function AutoComplete({
     },
     enabled: focused,
   });
-  console.log(focused);
 
   return (
     <div className='autocomplete' ref={containerRef}>
@@ -128,11 +132,11 @@ function AutoComplete({
         ref={inputRef}
         role='combobox' //a11y
         aria-haspopup='listbox' //a11y // what kind of popup
-        aria-expanded={focused} //a11y 
+        aria-expanded={focused} //a11y
         aria-activedescendant={
           //a11y
           isValid(highlightedEle, options.length)
-            ? `#${cid}-${options[highlightedEle].value}`
+            ? `${cid}-${options[highlightedEle].value}`
             : undefined
         }
         aria-autocomplete='list' // if we can select something from list and it will be selected
@@ -146,6 +150,7 @@ function AutoComplete({
         onFocus={() => {
           setFocused(true);
         }}
+        onBlur={() => setFocused(false)}
       />
       {focused && (
         <ul
@@ -180,9 +185,8 @@ function AutoComplete({
                   onClick={() => {
                     onSelectOption(opItem.value, opItem);
                   }}
-                  onKeyDownCapture={(e) =>
-                    onOptionSelectKeyDown(e.key, opItem.value, opItem)
-                  }
+                  onPointerDown={(e) => e.preventDefault()}
+                  // above will help in selecting via mouse as it also triggers blur of input
                 >
                   {label}
                 </li>

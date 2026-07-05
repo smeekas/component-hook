@@ -21,14 +21,6 @@ function useClickToOutside<T>({
         enabled
       ) {
         const inside = ref.current.contains(e.target);
-        console.log(
-          '[hook] pointerdown. inside container?',
-          inside,
-          'target=',
-          e.target,
-          'container=',
-          ref.current,
-        );
         if (!inside) {
           clickRef.current();
         }
