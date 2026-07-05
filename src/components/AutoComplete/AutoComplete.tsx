@@ -107,15 +107,6 @@ function AutoComplete({
     setFocused(false);
   };
 
-  const onOptionSelectKeyDown = (
-    key: string,
-    ...args: Parameters<NonNullable<AutoCompleteProps['onSelect']>>
-  ) => {
-    // a11y
-    if (key === 'Enter') {
-      onSelectOption(...args);
-    }
-  };
   const containerRef = useClickToOutside<HTMLDivElement>({
     onOutsideClick() {
       setFocused(false);
